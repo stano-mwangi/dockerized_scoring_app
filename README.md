@@ -50,14 +50,19 @@ CREATE TABLE scores (
 );
 
 # Assumptions
-
+-Users (participants) are pre-added via SQL
 - Judges and users are identified uniquely.
 - Judges can assign a score to each participant.
 - No authentication implemented (for demo purposes).
 
 # Design Choices
 
-- Vanilla HTML/CSS/JS without frameworks for clarity.
+- Vanilla HTML/CSS/JS.
 - PDO for database abstraction.
 - Logical separation of concerns.
 
+# Bonus Features I'd Add
+-Authentication for admin and judges
+-Judge scoring limits (e.g., per category)
+-Score history logs
+-Export scoreboard to PDF/CSV
