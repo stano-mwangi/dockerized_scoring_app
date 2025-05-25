@@ -7,7 +7,7 @@ RUN docker-php-ext-install pdo pdo_mysql
 RUN a2enmod rewrite
 
 # Copy custom Apache virtual host configuration
-COPY apache.conf /etc/apache2/sites-available/000-default.conf
+COPY ./docker/apache/apache.conf /etc/apache2/sites-available/000-default.conf
 
 # Set correct permissions
 RUN chown -R www-data:www-data /var/www/html && chmod -R 755 /var/www/html
