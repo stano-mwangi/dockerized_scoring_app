@@ -1,18 +1,12 @@
 <?php
-$host = 'db';
-$db   = 'scoring_app';
-$user = 'lampuser';
-$pass = 'lamp123';
-$charset = 'utf8mb4';
-$dsn = "mysql:host=$host;dbname=$db;charset=$charset";
+$dsn = 'sqlite:/var/www/html/src/database/scoring_app.sqlite';
 $options = [
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
 ];
+
 try {
-    $pdo = new PDO($dsn, $user, $pass, $options);
+    $pdo = new PDO($dsn, null, null, $options);
 } catch (PDOException $e) {
     die("Database connection failed: " . $e->getMessage());
 }
-
-
 ?>
