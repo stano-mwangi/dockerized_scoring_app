@@ -6,6 +6,8 @@ RUN docker-php-ext-install pdo pdo_mysql
 # Enable Apache modules
 RUN a2enmod rewrite
 
+# Copy application files from the docker folder to the web root
+COPY ./docker/ /var/www/html/
 # Copy custom Apache virtual host configuration
 COPY ./docker/apache/apache.conf /etc/apache2/sites-available/000-default.conf
 
