@@ -63,6 +63,7 @@ CREATE TABLE scores (
 
 # Bonus Features I'd Add
 -Authentication for admin and judges
+-admin adds participants 
 -Judge scoring limits (e.g., per category)
 -Score history logs
 -Export scoreboard to PDF/CSV
